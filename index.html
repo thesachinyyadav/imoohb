@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Merry Christmas Bhoomi Baby! ❤️</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(45deg, #FF61A6, #FFA6C9, #FFB6C1);
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #2C3E50;
+            overflow-x: hidden;
+        }
+
+        .snow {
+            position: fixed;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            to {
+                transform: translateY(100vh);
+            }
+        }
+
+        .heart {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            animation: pulse 1.5s infinite;
+        }
+
+        .heart::before, .heart::after {
+            content: '';
+            position: absolute;
+            width: 50px;
+            height: 80px;
+            background: #FF1493;
+            border-radius: 50px 50px 0 0;
+        }
+
+        .heart::before {
+            left: 50px;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        .heart::after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+
+        .message {
+            text-align: center;
+            padding: 30px;
+            max-width: 600px;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            margin: 20px;
+            animation: float 3s infinite ease-in-out;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+
+        .contact-info {
+            background: #FFE4E1;
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .contact-button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 25px;
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: transform 0.3s;
+        }
+
+        .phone { background: #4CAF50; }
+        .instagram { background: #E1306C; }
+        .email { background: #DB4437; }
+
+        .contact-button:hover {
+            transform: scale(1.1);
+        }
+
+        .special-text {
+            font-size: 1.2em;
+            color: #FF1493;
+            margin: 20px 0;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body>
+    <div class="heart"></div>
+    <div class="message">
+        <h1>Merry Christmas, Bhoomi Baby! 🎄</h1>
+        <p class="special-text">You're my everything, my precious baby! ❤️</p>
+        <p>What makes you special to me:</p>
+        <div class="special-text">
+            💖 Your beautiful smile lights up my world<br>
+            💖 Your caring nature touches my heart<br>
+            💖 Every moment with you feels magical<br>
+            💖 You make my life complete
+        </div>
+        
+        <div class="contact-info">
+            <p>Baby, I'm always here for you, day or night!</p>
+            <a href="tel:8861330665" class="contact-button phone">📞 Call Me</a>
+            <a href="https://instagram.com/thesachinyyadav" class="contact-button instagram">📸 Instagram</a>
+            <a href="mailto:sachinyadavparasf@gmail.com" class="contact-button email">📧 Email Me</a>
+        </div>
+    </div>
+
+    <script>
+        function createSnow() {
+            const snow = document.createElement('div');
+            snow.classList.add('snow');
+            snow.style.left = Math.random() * 100 + 'vw';
+            snow.style.animationDuration = Math.random() * 3 + 2 + 's';
+            snow.style.opacity = Math.random();
+            snow.style.width = snow.style.height = Math.random() * 10 + 5 + 'px';
+            document.body.appendChild(snow);
+            setTimeout(() => snow.remove(), 5000);
+        }
+        setInterval(createSnow, 100);
+    </script>
+</body>
+</html>
